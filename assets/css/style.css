@@ -170,13 +170,27 @@ html{
 
 }
 
-#slider {
+#carouse {
     position:relative;
     margin-top: 46px;
     padding-top:50%;
-    background: url(../img/slider/slider-1.jpg) top center / cover no-repeat ;
+    /* background: url(../img/slider/slider-1.jpg) top center / cover no-repeat; */
+
 }
-#slider .text-content{
+/* Class Slider */
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slider .slider-img{
+    width: 100%;
+}
+
+#slider .text-content,
+.slider .text-content{
     position: absolute;
     bottom: 47px;
     color:#fff;
@@ -188,10 +202,70 @@ html{
     /* width: 100%; */
     /* cách 3 */
     left:50%;
-    transform:translateX(-50%);
-
-  
+    transform:translateX(-50%); 
 }
+.slider-1{
+    animation-name: ChangeSlider1;
+    animation-duration:  15s;
+    animation-iteration-count: infinite;
+}
+@keyframes ChangeSlider1{
+    0%{
+        visibility: hidden;
+    } 
+    33%{
+        visibility: visible;
+    }
+    66%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.slider-2{
+    animation-name: ChangeSlider2;
+    animation-duration:  15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ChangeSlider2{
+    0%{
+        visibility: hidden;
+    } 
+    33%{
+        visibility: hidden;
+    }
+    66%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.slider-3{
+    animation-name: ChangeSlider3;
+    animation-duration:  15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ChangeSlider3{
+    0%{
+        visibility: hidden;
+    } 
+    33%{
+        visibility: hidden;
+    }
+    66%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
 #slider .text-header{
     font-weight: 500;
     font-size:24px;
